@@ -1,0 +1,59 @@
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    gap: 15px;
+    background-color: transparent;
+  }
+  
+  .nav-title {
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-right: auto;
+  }
+  
+  /* Shared nav link style */
+  .nav-link {
+    text-decoration: none; /* Remove default underline */
+    color: white; /* Default text color */
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    border-radius: 9px;
+    padding: 8px;
+    transition: background-color 0.5s ease, color 0.3s ease, transform 0.3s ease;
+  }
+  
+  /* Hover effect - background color change */
+  .nav-link:hover {
+    background-color: rgb(131, 148, 162); /* Light background on hover */
+    transform: scale(1.05);
+  }
+  /* Active page underline effect */
+  .nav-link.active {
+    font-weight: bold; /* Making the active page text bold */
+    color: rgb(25, 156, 222);
+    text-decoration: underline; /* Underline the text for the active page */
+    text-decoration-color: rgb(25, 156, 222);
+    pointer-events: none; /* Disable clicking on active link */
+  }
+  /* Responsive tweaks */
+  @media (max-width: 768px) {
+    nav {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .nav-link {
+      font-size: 0.95rem;
+      padding: 6px;
+    }
+  
+    .nav-title {
+      font-size: 1.5rem;
+    }
+  }
+  
