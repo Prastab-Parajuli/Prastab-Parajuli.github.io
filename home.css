@@ -1,6 +1,8 @@
 #home {
     margin-top: 100px;
+    padding: 0 1rem;
   }
+  
   .typewriter {
     text-align: center;
     overflow: hidden;
@@ -8,14 +10,16 @@
     white-space: nowrap;
     margin: 0 auto;
     color: white;
-    font-size: 40px;
+    font-size: 2.5rem;
     font-family: 'Roboto', sans-serif;
     width: 0;
-    animation: 
+    animation:
       typing 3s steps(20, end) forwards,
       blink-caret 1s step-end infinite;
     animation-delay: 0s, 3s;
+    max-width: 100%;
   }
+  
   @keyframes typing {
     from { width: 0 }
     to { width: 20ch }
@@ -25,9 +29,10 @@
     from, to { border-color: transparent }
     50% { border-color: white }
   }
- .hello {
+  
+  .hello {
     font-size: 2rem;
- }
+  }
   
   h3 {
     margin-top: 1rem;
@@ -45,6 +50,7 @@
     margin-bottom: 1.5rem;
     text-align: center;
     font-style: italic;
+    padding: 0 1rem;
   }
   
   .highlights {
@@ -55,12 +61,22 @@
   .highlight {
     margin: 10px 0;
     font-size: 1.2rem;
+    padding: 0 1rem;
+  }
+  
+  /* ---------- Responsive Layout ---------- */
+  
+  @media (max-width: 1024px) {
+    .typewriter {
+      font-size: 2.2rem;
+    }
   }
   
   @media (max-width: 768px) {
     nav {
       flex-direction: column;
       align-items: flex-start;
+      padding: 1rem;
     }
   
     nav a {
@@ -72,12 +88,16 @@
       font-size: 1.5rem;
     }
   
+    .typewriter {
+      font-size: 2rem;
+    }
+  
     h2 {
       font-size: 2rem;
     }
   
     p {
-      font-size: 1rem;
+      font-size: 0.95rem;
     }
   
     .highlight {
@@ -86,12 +106,16 @@
   }
   
   @media (max-width: 480px) {
-    h2 {
+    .nav-title {
+      font-size: 1.2rem;
+    }
+  
+    .typewriter {
       font-size: 1.6rem;
     }
   
-    .nav-title {
-      font-size: 1.2rem;
+    h2 {
+      font-size: 1.6rem;
     }
   
     p {
@@ -101,4 +125,10 @@
     .highlight {
       font-size: 0.9rem;
     }
+  
+    .hello {
+      font-size: 1.5rem;
+    }
+  }
+  
   }
