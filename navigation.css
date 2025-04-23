@@ -3,7 +3,7 @@ nav {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
+    padding: 1rem 2rem;
     gap: 15px;
     background-color: transparent;
   }
@@ -16,44 +16,45 @@ nav {
     margin-right: auto;
   }
   
-  /* Shared nav link style */
   .nav-link {
-    text-decoration: none; /* Remove default underline */
-    color: white; /* Default text color */
+    text-decoration: none;
+    color: white;
     font-family: 'Roboto', sans-serif;
     font-size: 1rem;
     border-radius: 9px;
-    padding: 8px;
+    padding: 8px 12px;
     transition: background-color 0.5s ease, color 0.3s ease, transform 0.3s ease;
   }
   
-  /* Hover effect - background color change */
   .nav-link:hover {
-    background-color: rgb(131, 148, 162); /* Light background on hover */
+    background-color: rgb(131, 148, 162);
     transform: scale(1.05);
   }
-  /* Active page underline effect */
+  
   .nav-link.active {
-    font-weight: bold; /* Making the active page text bold */
+    font-weight: bold;
     color: rgb(25, 156, 222);
-    text-decoration: underline; /* Underline the text for the active page */
+    text-decoration: underline;
     text-decoration-color: rgb(25, 156, 222);
-    pointer-events: none; /* Disable clicking on active link */
+    pointer-events: none;
   }
-  /* Responsive tweaks */
+  
+  /* Responsive Nav */
   @media (max-width: 768px) {
     nav {
       flex-direction: column;
       align-items: flex-start;
+      padding: 1rem;
+    }
+  
+    .nav-title {
+      font-size: 1.4rem;
+      margin-bottom: 0.5rem;
     }
   
     .nav-link {
       font-size: 0.95rem;
       padding: 6px;
-    }
-  
-    .nav-title {
-      font-size: 1.5rem;
     }
   }
   
