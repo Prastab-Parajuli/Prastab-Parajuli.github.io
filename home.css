@@ -1,21 +1,50 @@
 #home {
     margin-top: 100px;
   }
+  .typewriter {
+    text-align: center;
+    overflow: hidden;
+    border-right: 0.15em solid white;
+    white-space: nowrap;
+    margin: 0 auto;
+    color: white;
+    font-size: 40px;
+    font-family: 'Roboto', sans-serif;
+    width: 0;
+    animation: 
+      typing 3s steps(20, end) forwards,
+      blink-caret 1s step-end infinite;
+    animation-delay: 0s, 3s;
+  }
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 20ch }
+  }
   
-  h2 {
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: white }
+  }
+ .hello {
+    font-size: 2rem;
+ }
+  
+  h3 {
+    margin-top: 1rem;
     text-align: center;
     color: white;
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+    font-size: 1.7rem;
+    margin-bottom: 0.5rem;
   }
   
   p {
     display: flex;
     justify-content: center;
     color: white;
-    font-size: 1.25rem;
+    font-size: 1rem;
     margin-bottom: 1.5rem;
     text-align: center;
+    font-style: italic;
   }
   
   .highlights {
@@ -25,7 +54,7 @@
   
   .highlight {
     margin: 10px 0;
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
   
   @media (max-width: 768px) {
@@ -73,4 +102,3 @@
       font-size: 0.9rem;
     }
   }
-  
