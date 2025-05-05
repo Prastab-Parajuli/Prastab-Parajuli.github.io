@@ -1,25 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio Website</title>
+  <title>Portfolio Website - About</title>
 
   <!-- External CSS -->
-  <link rel="stylesheet" href="body.css" />
-  <link rel="stylesheet" href="navigation.css" />
+  <link rel="stylesheet" href="body.css">
+  <link rel="stylesheet" href="navigation.css">
+  <link rel="stylesheet" href="about.css">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&family=Montserrat:ital@0;1&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&family=Montserrat:ital@0;1&display=swap"
+    rel="stylesheet" />
 </head>
+
 <body>
+  <!-- Header & Navigation -->
   <header>
-    <nav>
+    <nav role="navigation" aria-label="Main Navigation">
       <div class="nav-title">Portfolio</div>
-      <a href="index.html" class="nav-link">Home</a>
-      <a href="about.html" class="nav-link active">About</a>
-      <a href="contact.html" class="nav-link">Contact</a>
+
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+      <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle navigation">&#9776;</label>
+
+      <div class="nav-links">
+        <a href="home.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link active">About</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </div>
     </nav>
   </header>
+
+  <!-- Main Content -->
+  <main>
+    <section class="intro-section">
+      <div class="intro">
+        <article class="bio">
+          <p>
+            <span class="greeting">HI THERE,</span><br>
+            <span class="shortinfo">I am an ITBBA Student.</span><br>
+            An aspiring IT professional currently studying at Haaga-Helia University, with a growing interest in IT project management and business analytics. Gaining foundational experience in applying digital tools to solve real-world problems and streamline operations.
+          </p>
+        </article>
+        <img class="image" src="profilepic.webp" alt="Profile" />
+      </div>
+    </section>
+
+    <section class="education-section">
+      <h1>My <span class="education">Education</span></h1>
+      <ul class="educations">
+        <li class="description">
+          <p class="degree">BBA in Information Technology (2024-Present)</p>
+          <p>Haaga-Helia University of Applied Sciences, Finland</p>
+          <p>Coursework: IT Project Management, Database Systems, Business Analytics</p>
+        </li>
+        <li class="description">
+          <p class="degree">High School (2019-2021)</p>
+          <p>Modern Boarding Higher Secondary School, Nepal</p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="skills-section">
+      <h1>My <span class="skills">Skills</span></h1>
+      <div class="skillslists">
+        <div class="flexbox">
+          <img class="logo" src="HTML5_Logo_512.png" alt="HTML Logo">
+        </div>
+        <div class="flexbox">
+          <img class="logo" src="CSS3_logo_and_wordmark.svg.png" alt="CSS Logo">
+        </div>
+        <div class="flexbox">
+          <img class="logo" src="Unofficial_JavaScript_logo_2.svg" alt="JavaScript Logo">
+        </div>
+        <div class="flexbox">
+          <img class="logo" src="microsoft.png" alt="Microsoft Office Logo">
+        </div>
+      </div>
+    </section>
+    <section class="projects-section">
+      <h1>Upcoming <span class="projects">Projects</span></h1>
+      <table>
+        <thead>
+          <tr>
+            <th>Project</th>
+            <th>Tools/Technologies</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Portfolio Website</td>
+            <td>HTML, CSS</td>
+            <td>Completed</td>
+          </tr>
+          <tr>
+            <td>Youtube Clone</td>
+            <td>HTML, CSS</td>
+            <td>In Progress</td>
+          </tr>
+          <tr>
+            <td>Interactive Quiz App</td>
+            <td>JavaScript, HTML, CSS</td>
+            <td>Planned</td>
+          </tr>
+          <tr>
+            <td>Personal Blog</td>
+            <td>WordPress, HTML, CSS</td>
+            <td>Planned</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    
+  </main>
+  <footer>
+    <div class="footer-container">
+      <p class="footer-text">&copy; 2025 Prastab Parajuli. All rights reserved.</p>
+      <div class="footer-socials">
+        <a href="https://www.linkedin.com/in/prastab-parajuli-9ba425207/" target="_blank" aria-label="LinkedIn">
+          <img src="linkedinlogo.png" alt="LinkedIn" />
+        </a>
+        <a href="https://github.com/Prastab-Parajuli/Prastab-Parajuli.github.io" target="_blank" aria-label="GitHub">
+          <img src="github.png" alt="GitHub" />
+        </a>
+        <a href="mailto:prasstav@gmail.com" aria-label="Email">
+          <img src="gmailicon.png" alt="Email" />
+        </a>
+        <a href="https://www.instagram.com/prasstav_/" target="_blank" aria-label="Instagram">
+          <img src="instagramlogo.png" alt="Instagram" />
+        </a>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html> 

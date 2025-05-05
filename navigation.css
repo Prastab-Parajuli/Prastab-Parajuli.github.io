@@ -1,60 +1,91 @@
+/* Header and Navigation Styles */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: rgb(10, 10, 10);
+  height: 70px;
+}
+
 nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  flex-wrap: wrap;
+}
+
+.nav-title {
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
+}
+
+.nav-links {
+  display: flex;
+  gap: 15px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: white;
+  font-size: 1.1rem;
+  font-family: 'Roboto', sans-serif;
+  padding: 8px 12px;
+  border-radius: 9px;
+  transition: background-color 0.5s ease, transform 0.3s ease;
+}
+
+.nav-link:hover {
+  background-color: rgb(131, 148, 162);
+  transform: scale(1.05);
+}
+
+.nav-link.active {
+  font-weight: bold;
+  color: rgb(183, 222, 25);
+  pointer-events: none;
+}
+
+/* Hide toggle and label by default */
+.nav-toggle {
+  display: none;
+}
+
+.nav-toggle-label {
+  display: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
+/* Responsive Navigation */
+@media (max-width: 768px) {
+  .nav-toggle-label {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .nav-toggle:checked + .nav-toggle-label + .nav-links {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    gap: 15px;
-    background-color: transparent;
   }
-  
-  .nav-title {
-    color: white;
-    font-family: "Montserrat", sans-serif;
-    font-size: 1.8rem;
-    font-weight: bold;
-    margin-right: auto;
-  }
-  
+
   .nav-link {
-    text-decoration: none;
-    color: white;
-    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    padding: 10px 0;
     font-size: 1rem;
-    border-radius: 9px;
-    padding: 8px 12px;
-    transition: background-color 0.5s ease, color 0.3s ease, transform 0.3s ease;
   }
-  
-  .nav-link:hover {
-    background-color: rgb(131, 148, 162);
-    transform: scale(1.05);
+
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
   }
-  
-  .nav-link.active {
-    font-weight: bold;
-    color: rgb(25, 156, 222);
-    text-decoration: underline;
-    text-decoration-color: rgb(25, 156, 222);
-    pointer-events: none;
-  }
-  
-  /* Responsive Nav */
-  @media (max-width: 768px) {
-    nav {
-      flex-direction: column;
-      align-items: flex-start;
-      padding: 1rem;
-    }
-  
-    .nav-title {
-      font-size: 1.4rem;
-      margin-bottom: 0.5rem;
-    }
-  
-    .nav-link {
-      font-size: 0.95rem;
-      padding: 6px;
-    }
-  }
-  
+}

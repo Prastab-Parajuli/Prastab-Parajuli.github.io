@@ -1,111 +1,43 @@
+/* Layout for #home section */
 #home {
-    margin-top: 100px;
-    padding: 0 1rem;
-  }
-  
+  margin-top: 300px;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Typewriter animation */
+.typewriter {
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 0 auto;
+  font-size: 3.5rem;
+  width: 0;
+  max-width: 100%;
+  animation: typing 1s steps(13, end) forwards;
+}
+span {
+  color: rgb(183, 222, 25);
+}
+@keyframes typing {
+  from { width: 0 }
+  to { width: 13ch }
+}
+/* Responsive Layout */
+@media (max-width: 1024px) {
   .typewriter {
-    text-align: center;
-    overflow: hidden;
-    border-right: 0.15em solid white;
-    white-space: nowrap;
-    margin: 0 auto;
-    color: white;
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .typewriter {
     font-size: 2.5rem;
-    font-family: 'Roboto', sans-serif;
-    width: 0;
-    animation: typing 3s steps(20, end) forwards, blink-caret 1s step-end infinite;
-    animation-delay: 0s, 3s;
-    max-width: 100%;
   }
-  
-  @keyframes typing {
-    from { width: 0 }
-    to { width: 20ch }
-  }
-  
-  @keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: white }
-  }
-  
-  .hello {
+}
+
+@media (max-width: 480px) {
+  .typewriter {
     font-size: 2rem;
   }
-  
-  h3 {
-    margin-top: 1rem;
-    text-align: center;
-    color: white;
-    font-size: 1.7rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  p {
-    display: flex;
-    justify-content: center;
-    color: white;
-    font-size: 1rem;
-    margin-bottom: 1.5rem;
-    text-align: center;
-    font-style: italic;
-    padding: 0 1rem;
-  }
-  
-  .highlights {
-    text-align: center;
-    color: white;
-  }
-  
-  .highlight {
-    margin: 10px 0;
-    font-size: 1.2rem;
-    padding: 0 1rem;
-  }
-  
-  /* Responsive Layout */
-  @media (max-width: 1024px) {
-    .typewriter {
-      font-size: 2.2rem;
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .typewriter {
-      font-size: 2rem;
-    }
-  
-    h3 {
-      font-size: 1.5rem;
-    }
-  
-    p {
-      font-size: 0.95rem;
-    }
-  
-    .highlight {
-      font-size: 0.95rem;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .typewriter {
-      font-size: 1.6rem;
-    }
-  
-    h3 {
-      font-size: 1.3rem;
-    }
-  
-    p {
-      font-size: 0.9rem;
-    }
-  
-    .highlight {
-      font-size: 0.9rem;
-    }
-  
-    .hello {
-      font-size: 1.4rem;
-    }
-  }
-  
+}
