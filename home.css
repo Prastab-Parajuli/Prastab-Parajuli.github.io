@@ -1,10 +1,13 @@
 /* Layout for #home section */
 #home {
-  margin-top: 200px;
   color: white;
   font-family: 'Roboto', sans-serif;
+  margin-top: 250px;
 }
 
+h1 {
+  text-align: center;
+}
 /* Typewriter animation */
 .typewriter {
   text-align: center;
